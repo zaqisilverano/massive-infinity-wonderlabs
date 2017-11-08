@@ -1,0 +1,35 @@
+/* Component Styles */
+
+.mi-container {
+  width: 100%;
+  max-width: 1220px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include desktop {
+    max-width: 920px;
+  }
+  @include tablet {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @include mobile {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.btn-main {
+  background-color: $mainColor;
+  text-transform: uppercase;
+  color: $white;
+  border-radius: 30px;
+  font-family: 'montserrat-bold';
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 8px 30px;
+  box-shadow: none !important;
+}

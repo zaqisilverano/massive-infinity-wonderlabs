@@ -1,0 +1,28 @@
+/* VENDORS COMPONENTS */
+
+@import "vendors/bootstrap/bootstrap.scss";
+@import "vendors/fontawesome/_font-awesome";
+
+
+/* BASE */
+
+@import "helpers/variables.scss";
+@import "base/base.scss";
+
+
+/* HELPERS AND RESETTER */
+
+@import "helpers/reset.scss";
+@import "helpers/mixins.scss";
+@import "helpers/vendor.scss";
+
+
+/* COMPONENT */
+
+@import "component/component.scss";
+
+
+/* LAYOUT */
+
+@import "layout/header.scss";
+@import "layout/main-content.scss";

@@ -1,0 +1,106 @@
+/* CROSS-SITE MIXINS */
+
+
+/* CSS3 Animated Transitions */
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition:$transition-property $transition-time $method;
+    -moz-transition:$transition-property $transition-time $method;
+    -ms-transition:$transition-property $transition-time $method;
+    -o-transition:$transition-property $transition-time $method;
+    transition:$transition-property $transition-time $method;
+}
+
+// CSS 3 General Transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+/* CSS3 Border Radius */
+
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+
+@mixin border-top-left-radius($radius) {
+	-webkit-border-top-left-radius:$radius;
+	-moz-border-top-left-radius:$radius;
+	border-top-left-radius:$radius;
+}
+
+@mixin border-top-right-radius($radius) {
+	-webkit-border-top-right-radius:$radius;
+	-moz-border-top-right-radius:$radius;
+	border-top-right-radius:$radius;
+}
+
+
+@mixin border-bottom-left-radius($radius) {
+	-webkit-border-bottom-left-radius:$radius;
+	-moz-border-bottom-left-radius:$radius;
+	border-bottom-left-radius:$radius;
+}
+
+@mixin border-bottom-right-radius($radius) {
+	-webkit-border-bottom-right-radius:$radius;
+	-moz-border-bottom-right-radius:$radius;
+	border-bottom-right-radius:$radius;
+}
+
+
+
+/* CSS3 Text shadow */
+
+@mixin text-shadow($color, $offset, $blur, $spread) {
+	-webkit-text-shadow:$color $offset $blur $spread;
+	-moz-text-shadow:$color $offset $blur $spread;
+	text-shadow:$color $offset $blur $spread;
+}
+
+/* CSS3 Box shadow */
+
+@mixin box-shadow($color, $offset, $blur, $spread) {
+	-webkit-box-shadow:$color $offset $blur $spread;
+	-moz-box-shadow:$color $offset $blur $spread;
+	box-shadow:$color $offset $blur $spread;
+}
+
+
+/**
+ * Define the media queries for each type of screens.
+ */
+
+$mobile-width: 768px;
+$tablet-width: 1024px;
+$desktop-width: 1200px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media screen and (min-width: #{$desktop-width + 1px}) {
+    @content;
+  }
+}
